@@ -5,11 +5,27 @@
 	<title>File Upload</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    
+    body{
+      margin-left: 40px;
+    }
+    
+    span {
+     cursor:pointer;
+     color:blue;
+     text-decoration:underline;
+    }
+    
+  </style>
+  
 </head>
   
 <body>
   <br />
-  <h1>Instructions</h1>
+  <h1>CERR Geo-Application</h1>
+  <h2>Instructions</h2>
   <ol>
   <li>Export as CSV from SEV_DISTRIBUTION.TAXPAYER_CREDITED, filter by appropriate FISCAL_YEAR</li>
   <li>Remove All Rows from CSV file except TAXPAYER_CREDITED_ID, PHYS_ADDRESS, PHYS_ZIP</li>
@@ -19,6 +35,8 @@
     
 <input id="fileItem" type="file">
   
+  <script src="assets/papaparse.min.js"></script>  
+  <script src="assets/FileSaver.min.js"></script>
   <script src="assets/app.js"></script>
 
 </body>
