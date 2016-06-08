@@ -6,19 +6,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <style>
-    
-    body{
-      margin-left: 40px;
-    }
-    
-    span {
-     cursor:pointer;
-     color:blue;
-     text-decoration:underline;
-    }
-    
-  </style>
+    <link rel="stylesheet" type="text/css" href="src/common/css/app.css" />
   
 </head>
   
@@ -28,16 +16,15 @@
   <h2>Instructions</h2>
   <ol>
   <li>Export as CSV from SEV_DISTRIBUTION.TAXPAYER_CREDITED, filter by appropriate FISCAL_YEAR</li>
-  <li>Remove All Rows from CSV file except TAXPAYER_CREDITED_ID, PHYS_ADDRESS, PHYS_ZIP</li>
+  <li>Remove All Rows from CSV file except TAXPAYER_CREDITED_ID, LG_ID, PHYS_ADDRESS, PHYS_ZIP</li>
     <li>Delete Header Row from File.  Save.</li>
     <li>Use the button below to load the file you just saved.</li>
   </ol>
     
 <input id="fileItem" type="file">
   
-  <script src="assets/papaparse.min.js"></script>  
-  <script src="assets/FileSaver.min.js"></script>
-  <script src="assets/app.js"></script>
+    <script src="dest/vendor.bundle.js"></script>
+    <script src="dest/app.min.js"></script>
 
 </body>
   
