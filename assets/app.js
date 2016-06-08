@@ -188,19 +188,6 @@ function geocodingSummary(match_report) {
     //sort by id
     match_results.sort(compare);
 
-    //add title elements
-    match_results.unshift({
-        "OBJECTID": "OBJECTID",
-        "Orig_Street": "ORIG_STREET",
-        "Orig_ZIP": "ORIG_ZIP",
-        "score": "SCORE",
-        "match_addr": "MATCH_ADDR",
-        "locator": "LOCATOR",
-        "addr_type": "ADDR_TYPE",
-        "lat": "LAT",
-        "lng": "LNG"
-    });
-
     //make downloadable
     downloadCsv(match_results, "Match Report");
 
@@ -240,13 +227,6 @@ function errorReport(invalid_results) {
 
     //sort by id
     error_results.sort(compare);
-
-    //add title elements
-    error_results.unshift({
-        "OBJECTID": "OBJECTID",
-        "Street": "STREET",
-        "ZIP": "ZIP"
-    });
 
     //make downloadable
     downloadCsv(error_results, "Error Report");
@@ -377,21 +357,6 @@ function byAddressReport(data) {
     //sort by id
     results.sort(compare);
 
-    //add title elements
-    results.unshift({
-        "OBJECTID": "OBJECTID",
-        "Orig_Street": "ORIG_STREET",
-        "Orig_ZIP": "ORIG_ZIP",
-        "score": "SCORE",
-        "match_addr": "MATCH_ADDR",
-        "locator": "LOCATOR",
-        "addr_type": "ADDR_TYPE",
-        "lat": "LAT",
-        "lng": "LNG",
-        "city": "CITY",
-        "county": "COUNTY"
-    });
-
     //make downloadable
     downloadCsv(results, "Results by Address");
 
@@ -441,13 +406,6 @@ function analyzeResults(data) {
     //sort data
     collapsed_result.sort(compare);
 
-    //add title row
-    collapsed_result.unshift({
-        "city": "CITY",
-        "county": "COUNTY",
-        "count": "COUNT"
-    });
-
     //create download link
     downloadCsv(collapsed_result, 'Total Count by City &amp; County');
 
@@ -457,36 +415,16 @@ function analyzeResults(data) {
 function downloadCsv(objArray, link_text) {
 
 
-    var array = objArray; //typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
-    var str = '';
-
-    for (var i = 0; i < array.length; i++) {
-
-        var line = '';
-        var count = 0;
-
-        for (var index in array[i]) {
-
-            if (count !== 0) {
-                line += ',';
-            }
-
-            line += array[i][index];
-            count++;
-        }
-
-        str += line + '\r\n';
-    }
-
+  var str = Papa.unparse(objArray);
 
 
     var encodedUri = encodeURI("data:text/csv;charset=utf-8," + str);
+  
     var spacer = document.createElement("span");
     var whitespace = document.createTextNode("\u00A0\u00A0\u00A0\u00A0");
     spacer.appendChild(whitespace);
     var link = document.createElement("span");
-    //link.setAttribute("href", encodedUri);
-    //link.setAttribute("download", "graphData.csv");
+
     link.innerHTML = "-" + link_text + "-";
     document.body.appendChild(link);
     document.body.appendChild(whitespace);
