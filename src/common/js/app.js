@@ -1,5 +1,3 @@
-// @flow
-
 require("!style!css!../css/app.css");
 
 
@@ -7,7 +5,9 @@ var handleFiles = require("./handleFiles.js");
 
 
 document.getElementById('fileItem').addEventListener('change', function() {
-    handleFiles(this.files[0]);
+
+    handleFiles(this.files[0])
+
 });
 
 

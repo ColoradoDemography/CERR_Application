@@ -1,15 +1,13 @@
-// @flow
-
 var Papa = require("../../lib/js/papaparse.js");
-var makePostRequest = require("./makePostRequest.js");
 
+var makePostRequest = require("./makePostRequest.js");
 /**
  * This function loads a file, and parses it into two arrays
  * @params {File} uploaded_file a Javascript File Object
  * @returns {Array} batch An Array of [Array of Objects] to be fed to the OIT Geocoding Service.
  * @returns {Array} original_data number, to link back to at a future time... perhaps we can include this data in the batched data? 
  */
-module.exports = function(uploaded_file: Object) {
+module.exports = function(uploaded_file) {
 
     var original_data = [];
     var BATCH_COUNT = 500; //number of records processed per each geocode batch request
@@ -57,8 +55,6 @@ module.exports = function(uploaded_file: Object) {
         });
 
         makePostRequest(batch, original_data);
-
     };
-
 
 }

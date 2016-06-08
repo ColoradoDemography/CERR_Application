@@ -5,8 +5,6 @@ var findPlace = require("./findPlace.js");
 
 module.exports = function(batch, original_data) {
 
-
-
     var BATCH_STAGGER = 2000; //ms between each geocode batch request
 
 
