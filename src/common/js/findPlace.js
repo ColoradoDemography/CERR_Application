@@ -42,7 +42,7 @@ module.exports = function(compiled_results, match_results) {
                 JSONObject.districts = "false";
 
                 xhr[i] = new XMLHttpRequest();
-                xhr[i].open('POST', 'http://red-meteor-147235.nitrousapp.com:4567/lookup');
+                xhr[i].open('POST', 'https:/gis.dola.colorado.gov/pt2pl/place');
                 xhr[i].setRequestHeader("content-type", "application/json");
 
                 xhr[i].send(JSON.stringify(JSONObject));
