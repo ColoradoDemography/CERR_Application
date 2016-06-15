@@ -32,7 +32,6 @@ module.exports = function(compiled_results, match_results) {
     var promisearray = placebatch.map(function(d, i) {
 
         //stagger requests using setTimeout
-
         return new Promise(function(resolve, reject) {
 
             window.setTimeout(function() {
