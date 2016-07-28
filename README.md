@@ -8,7 +8,7 @@ This is a [webpack](https://webpack.github.io/) project.  It is written in ES6 J
 To continue development:  
 
 ```
-git clone https://github.com/royhobbstn/CERR_Application.git
+git clone https://github.com/codemog/CERR_Application.git
 ```
 
 Then install dependencies with one command:
