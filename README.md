@@ -1,6 +1,6 @@
 # CERR_Application
 
-Geo-Processing Pipeline for CERR.  Geocode Addresses and Place Look-up via Point2Place API.  Compiling Stats.
+Geo-Processing Pipeline for CERR.  Geocode Addresses and Place Look-up via [Point2Place API](https://github.com/ColoradoDemography/Point2PlaceAPI).  Compiling Stats.
 
 This is a [webpack](https://webpack.github.io/) project.  It is written in ES6 Javascript that is compiled to ES5 for compatibility (through [Babel](https://babeljs.io/)).  [Flow Type](https://flowtype.org/) checking is enabled.  [ESLint](http://eslint.org/) is enabled.  Formatted comments provide for automated documentation through [DocumentationJS](http://documentation.js.org/). 
 
