@@ -7,9 +7,10 @@ Add LGID field (text, 5).
 
 **Process**
 
-First portion of CERR_no_arcpy.py loads the necessary data from Oracle as a csv.
+Download the necessary data as a csv from DLG_FP.DD_CERR_EMP by selecting where GEO_CHECKED IS NULL and GEO_SCORE IS NOT NULL
 
-Create a shapefile from the data and spatially join it to the base data.
+Create a shapefile from the data by geocoding the coordinates in the csv
+Spatially join the addresses to the muni/county shapefile to assign an LGID
 
 ***Optional depending on circumstances***
 
