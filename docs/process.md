@@ -18,4 +18,4 @@ Create a line file from the base and then buffer that by 100 feet to locate ques
 
 **Process continued**
 
-Run the second portion of CERR_no_arcpy.py to update the data in Oracle with the proper LGID.
+Convert the dbf of the shapefile into a csv and then run the second portion of CERR_no_arcpy.py to update the data in Oracle with the proper LGID.
