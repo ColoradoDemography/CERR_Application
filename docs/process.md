@@ -19,3 +19,6 @@ Create a line file from the base and then buffer that by 100 feet to locate ques
 **Process continued**
 
 Convert the dbf of the shapefile into a csv and then run the second portion of CERR_no_arcpy.py to update the data in Oracle with the proper LGID.
+
+Make sure your LGID and County fields keep leading zeroes.
+You may need to adjust those variables in the python script (str(row[])) to make sure you are grabbing the right fields
