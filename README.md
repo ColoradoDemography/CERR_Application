@@ -1,3 +1,5 @@
+# See process.md under docs for current status. Below is reference only, not being used at this time
+
 # CERR_Application
 
 Geo-Processing Pipeline for CERR.  Geocode Addresses and Place Look-up via [Point2Place API](https://github.com/ColoradoDemography/Point2PlaceAPI).  Compiling Stats.
